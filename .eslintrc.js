@@ -23,6 +23,8 @@ module.exports = {
         "avoidEscape": true
       }
     ],
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
     indent: ["error", 2, { SwitchCase: 1 }],
     "prettier/prettier": [
       "error",
