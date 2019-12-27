@@ -1,19 +1,19 @@
-import React, { ReactElement } from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import React, { ReactElement } from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
 const defaultProps = {
   linkText: `View the source`,
-}
+};
 
-type SourceProps = { description: string } & typeof defaultProps
+type SourceProps = { description: string } & typeof defaultProps;
 
 type UrlProps = {
   site: {
     siteMetadata: {
-      exampleUrl: string
-    }
-  }
-}
+      exampleUrl: string;
+    };
+  };
+};
 
 const Source = ({ description, linkText }: SourceProps): ReactElement => {
   const data = useStaticQuery<UrlProps>(graphql`
@@ -24,7 +24,7 @@ const Source = ({ description, linkText }: SourceProps): ReactElement => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <React.Fragment>
@@ -32,9 +32,9 @@ const Source = ({ description, linkText }: SourceProps): ReactElement => {
         {description} <br /> <a href={data.site.siteMetadata.exampleUrl}>{linkText}</a>
       </p>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default Source
+export default Source;
 
-Source.defaultProps = defaultProps
+Source.defaultProps = defaultProps;
