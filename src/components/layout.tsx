@@ -1,6 +1,6 @@
-import * as React from "react"
+import * as React from "react";
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../utils/typography";
 
 const MainLayout: React.FC = ({ children }) => (
   <div
@@ -15,6 +15,6 @@ const MainLayout: React.FC = ({ children }) => (
   >
     {children}
   </div>
-)
+);
 
-export default MainLayout
+export default MainLayout;
