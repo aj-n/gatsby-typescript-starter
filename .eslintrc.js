@@ -32,7 +32,7 @@ module.exports = {
       4,
       {
         ignoreComments: true,
-        SwitchCase: 2,
+        SwitchCase: 1,
       }
     ],
     "prettier/prettier": [
